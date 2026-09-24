@@ -25,12 +25,22 @@
       $font-title-secondary;
   }
 
-  &__crown {
-    color: $color-background;
-    font-size: .75em;
-    line-height: .8;
-    transform: rotate(-12deg);
-  }
+  &__question {
+  position: relative;
+  display: inline-block;
+}
+
+&__crown {
+  position: absolute;
+  bottom: calc(100% - 12px);
+  left: 50%;
+  display: block;
+  width: 42px;
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%) rotate(-10deg);
+  pointer-events: none;
+}
 
   &__intro {
     margin: 6px 0 24px;
