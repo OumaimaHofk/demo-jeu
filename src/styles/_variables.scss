@@ -1,17 +1,15 @@
-:root {
-  --color-light: #fff;
-  --color-dark: #222220;
-  --color-background: #f3e7d3;
+$color-light: #fff;
+$color-dark: #222220;
+$color-background: #f3e7d3;
+$color-primary: #ffbc08;
+$color-primary-hover: #ffd34c;
+$color-secondary: #4eb6a8;
+$color-accent: #ff4e6b;
 
-  --color-primary: #ffbc08;
-  --color-primary-hover: #ffd34c;
-  --color-secondary: #4eb6a8;
-  --color-accent: #ff4e6b;
+$font-title-primary: "Recursive", sans-serif;
+$font-title-secondary: "Rubik", sans-serif;
+$font-title-display: "Barrio", cursive;
+$font-text: "Recursive", sans-serif;
 
-  --font-title-primary: 'Recursive', sans-serif;
-  --font-title-secondary: 'Rubik', sans-serif;
-  --font-title-display: 'Barrio', cursive;
-  --font-text: 'Recursive', sans-serif;
-
-  --margin-link: 1.3rem;
-}
+$margin-link: 1.3rem;
+$pink-height: 315px;

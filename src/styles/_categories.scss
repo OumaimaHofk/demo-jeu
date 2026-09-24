@@ -1,10 +1,165 @@
+@use "variables" as *;
 .categories {
   min-height: 610px;
   padding: 95px 5.5% 55px;
-  background-color: var(--color-dark);
+  background-color: $color-dark;
   background-image: url("../images/elts/pattern-dark.png");
   background-repeat: repeat-y;
   background-position: left -315px;
   background-size: 100% auto;
-  color: var(--color-background);
+  color: $color-background;
+
+  &__label {
+    margin: 0 0 5px;
+    color: $color-accent;
+    font: 800 .75rem $font-title-secondary;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    font: 900 clamp(2rem, 4vw, 2.8rem) / 1.05
+      $font-title-secondary;
+  }
+
+  &__intro {
+    margin: 6px 0 26px;
+    color: #c5bdb2;
+    font: 500 .9rem / 1.5 $font-text;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+.category-card {
+  --card-color: #ff9da4;
+  --icon-x: -21px;
+
+  min-height: 185px;
+  padding: 18px;
+  border: 1px solid #343534;
+  background: #1d1e1d;
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--card-color);
+
+    &::after {
+      display: block;
+      width: 32px;
+      height: 32px;
+      content: "";
+      background-image: url("../images/elts/icon/category/dark.svg");
+      background-repeat: no-repeat;
+      background-size: 354px 74px;
+      background-position: var(--icon-x) -21px;
+    }
+  }
+
+  &__title {
+    margin: 14px 0 3px;
+    color: var(--card-color);
+    font: 800 1.3rem / 1.1 $font-title-secondary;
+  }
+
+  &__description {
+    margin: 0;
+    color: #c5bdb2;
+    font: 500 .8rem / 1.45 $font-text;
+  }
+
+  &--action {
+    --card-color: #ff9da4;
+    --icon-x: -21px;
+  }
+
+  &--comedy {
+    --card-color: #a8ecc8;
+    --icon-x: -61px;
+  }
+
+  &--drama {
+    --card-color: #ec7eb5;
+    --icon-x: -101px;
+  }
+
+  &--scifi {
+    --card-color: #6ac6f8;
+    --icon-x: -141px;
+  }
+
+  &--horror {
+    --card-color: #70cabe;
+    --icon-x: -181px;
+  }
+
+  &--animation {
+    --card-color: #ffb28e;
+    --icon-x: -221px;
+  }
+
+  &--classic {
+    --card-color: #a0e1d8;
+    --icon-x: -261px;
+  }
+
+  &--cult {
+    --card-color: #ffe28d;
+    --icon-x: -301px;
+  }
+}
+
+@media (max-width: 900px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .categories {
+    min-height: 0;
+    padding: 75px 16px 28px;
+    background-position: left -390px;
+
+    &__title {
+      max-width: 300px;
+      font-size: 2rem;
+    }
+
+    &__intro {
+      font-size: .8rem;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  .category-card {
+    display: grid;
+    grid-template-columns: 45px minmax(75px, 1fr) minmax(0, 1.4fr);
+    align-items: center;
+    gap: 10px;
+    min-height: 82px;
+    padding: 10px;
+
+    &__title {
+      margin: 0;
+      font-size: .95rem;
+      overflow-wrap: anywhere;
+    }
+
+    &__description {
+      font-size: .7rem;
+    }
+  }
 }

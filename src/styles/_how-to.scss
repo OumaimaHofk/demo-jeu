@@ -1,15 +1,18 @@
+@use "variables" as *;
+@use "webfonts" as *;
+
 .how-to {
   width: calc(100% - 28px);
   min-height: 338px;
   margin: 6px auto 0;
   padding: 52px 5.5% 55px;
-  background: var(--color-dark);
-  color: var(--color-background);
+  background: $color-dark;
+  color: $color-background;
 
   &__label {
     margin: 0 0 5px;
-    color: var(--color-accent);
-    font: 800 .75rem var(--font-title-secondary);
+    color: $color-accent;
+    font: 800 .75rem $font-title-secondary;
     text-transform: uppercase;
   }
 
@@ -19,11 +22,11 @@
     gap: 8px;
     margin: 0;
     font: 900 clamp(2rem, 3.2vw, 2.7rem) / 1.05
-      var(--font-title-secondary);
+      $font-title-secondary;
   }
 
   &__crown {
-    color: var(--color-background);
+    color: $color-background;
     font-size: .75em;
     line-height: .8;
     transform: rotate(-12deg);
@@ -31,7 +34,7 @@
 
   &__intro {
     margin: 6px 0 24px;
-    font: 500 .9rem / 1.5 var(--font-text);
+    font: 500 .9rem / 1.5 $font-text;
   }
 
   &__steps {
@@ -58,19 +61,19 @@
     h3 {
       margin: 0;
       font: 800 clamp(1rem, 1.6vw, 1.4rem) / 1.2
-        var(--font-title-secondary);
+        $font-title-secondary;
     }
   }
 
   &__number {
     flex: none;
-    color: var(--color-accent);
-    font: 400 3rem / 1 var(--font-title-display);
+    color: $color-accent;
+    font: 400 3rem / 1 $font-title-display;
   }
 
   &__step p {
     margin: 10px 0 0;
-    font: 500 .8rem / 1.5 var(--font-text);
+    font: 500 .8rem / 1.5 $font-text;
   }
 }
 
@@ -83,6 +86,9 @@
     &__title {
       max-width: 260px;
       font-size: 2rem;
+    }
+    &__crown {
+      display: none;
     }
 
     &__intro {

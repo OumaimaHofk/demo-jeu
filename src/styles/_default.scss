@@ -1,3 +1,5 @@
+@use "variables" as *;
+@use "webfonts" as *;
 * {
   box-sizing: border-box;
 }
@@ -8,9 +10,9 @@ html {
 
 body {
   margin: 0;
-  background: #f3e7d3;
-  color: var(--color-dark);
-  font-family: var(--font-text);
+  background: $color-background;
+  color: $color-dark;
+  font-family: $font-text;
 }
 
 a {

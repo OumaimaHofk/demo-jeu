@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .site-header {
   padding-top: 1.3rem;
 }
@@ -9,7 +11,7 @@
   gap: 2rem;
   min-height: 105px;
   padding: 0 3rem 1rem;
-  border-bottom: 15px solid var(--color-dark);
+  border-bottom: 15px solid $color-dark;
 
   &__brand {
     display: block;
@@ -37,13 +39,13 @@
     gap: .15rem;
     padding: .45rem 0 .65rem;
     border-bottom: 1px dotted transparent;
-    font: 700 .95rem var(--font-title-secondary);
+    font: 700 .95rem $font-title-secondary;
     text-decoration: none;
     white-space: nowrap;
   
     &:hover,
     &--active {
-      border-bottom-color: var(--color-dark);
+      border-bottom-color: $color-dark;
     }
   }
 
@@ -81,12 +83,12 @@
     height: 50px;
     border: 1px dotted #d8cbb6;
     color: #818181;
-    font: 700 .8rem var(--font-title-secondary);
+    font: 700 .8rem $font-title-secondary;
   
     &--active {
-      border-color: var(--color-primary);
-      background: var(--color-primary);
-      color: var(--color-dark);
+      border-color: $color-primary;
+      background: $color-primary;
+      color: $color-dark;
     }
   }
 
@@ -142,7 +144,7 @@
       span {
         width: 17px;
         height: 3px;
-        background: var(--color-dark);
+        background: $color-dark;
 
         &:last-child {
           width: 10px;
@@ -159,8 +161,8 @@
       display: flex;
       flex-direction: column;
       padding: 1rem;
-      background: var(--color-background);
-      box-shadow: 0 5px 0 var(--color-dark);
+      background: $color-background;
+      box-shadow: 0 5px 0 $color-dark;
 
       a {
         padding: .7rem;
