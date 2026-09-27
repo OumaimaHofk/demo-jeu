@@ -1,4 +1,5 @@
 @use "variables" as *;
+
 .categories {
   min-height: 610px;
   padding: 95px 5.5% 55px;
@@ -23,9 +24,8 @@
   }
 
   &__intro {
-    margin: 6px 0 26px;
-    color: #c5bdb2;
-    font: 500 .9rem / 1.5 $font-text;
+    margin: 6px 0 28px;
+    font: 500 .9rem / 1.45 $font-text;
   }
 
   &__grid {
@@ -126,8 +126,13 @@
 @media (max-width: 760px) {
   .categories {
     min-height: 0;
-    padding: 75px 16px 28px;
-    background-position: left -390px;
+    padding: 215px 16px 36px;
+    background-position: left #{-$pink-height-mobile};
+
+    &__header {
+      width: 100%;
+      margin: 0 0 24px;
+    }
 
     &__title {
       max-width: 300px;
@@ -135,6 +140,8 @@
     }
 
     &__intro {
+      width: 100%;
+      margin: 6px 0 0;
       font-size: .8rem;
     }
 
@@ -146,19 +153,29 @@
 
   .category-card {
     display: grid;
-    grid-template-columns: 45px minmax(75px, 1fr) minmax(0, 1.4fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    grid-template-rows: auto auto;
     align-items: center;
-    gap: 10px;
+    gap: 4px 10px;
     min-height: 82px;
     padding: 10px;
 
+    &__icon {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
     &__title {
+      grid-column: 1;
+      grid-row: 2;
       margin: 0;
       font-size: .95rem;
       overflow-wrap: anywhere;
     }
 
     &__description {
+      grid-column: 2;
+      grid-row: 1 / 3;
       font-size: .7rem;
     }
   }

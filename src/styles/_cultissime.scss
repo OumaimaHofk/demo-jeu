@@ -1,5 +1,4 @@
 @use "variables" as *;
-@use "webfonts" as *;
 
 .showcase {
   // Même largeur que la section « Comment jouer ? ».
@@ -153,13 +152,16 @@
   }
 
   .cultissime {
+  min-height: $pink-height;
+
     &__inner {
       display: block;
       padding: 28px 16px 20px;
+      min-height: $pink-height;
     }
 
     &__title {
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 8vw, 2.5rem);
     }
 
     &__subtitle {
@@ -172,14 +174,18 @@
   }
 
   .ghost {
-  bottom: 55px;
+  top: 165px;
+  bottom: auto;
   left: 50%;
   width: 185px;
-  margin-left: -92.5px;
-
+  margin-left: 0;
+  transform: translate3d(-50%,var(--ghost-shift, 0px),0);
+  
   &__crown {
-    top: -125px;
-    width: 160px;
+    top: -98px;
+    left: 50%;
+    width: 118px;
+    Transform: translateX(-50%);
   }
 }
 
@@ -187,7 +193,7 @@
     position: absolute;
     z-index: 4;
     right: 12px;
-    bottom: -15px;
+    bottom: -175px;
     left: 12px;
     max-width: none;
     padding: 20px;
@@ -206,11 +212,6 @@
       width: 100%;
       margin-top: 15px;
     }
-  }
-
-  .showcase__bottom {
-    min-height: 105px;
-    background-position: left -390px;
   }
 }
 

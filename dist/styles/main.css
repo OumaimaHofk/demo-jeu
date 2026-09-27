@@ -716,12 +716,16 @@ img {
   .showcase {
     width: 100%;
   }
+  .cultissime {
+    min-height: 315px;
+  }
   .cultissime__inner {
     display: block;
     padding: 28px 16px 20px;
+    min-height: 315px;
   }
   .cultissime__title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 2.5rem);
   }
   .cultissime__subtitle {
     font-size: 0.8rem;
@@ -730,20 +734,24 @@ img {
     position: static;
   }
   .ghost {
-    bottom: 55px;
+    top: 165px;
+    bottom: auto;
     left: 50%;
     width: 185px;
-    margin-left: -92.5px;
+    margin-left: 0;
+    transform: translate3d(-50%, var(--ghost-shift, 0px), 0);
   }
   .ghost__crown {
-    top: -125px;
-    width: 160px;
+    top: -98px;
+    left: 50%;
+    width: 118px;
+    Transform: translateX(-50%);
   }
   .quote-card {
     position: absolute;
     z-index: 4;
     right: 12px;
-    bottom: -15px;
+    bottom: -175px;
     left: 12px;
     max-width: none;
     padding: 20px;
@@ -759,10 +767,6 @@ img {
     display: block;
     width: 100%;
     margin-top: 15px;
-  }
-  .showcase__bottom {
-    min-height: 105px;
-    background-position: left -390px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -791,9 +795,8 @@ img {
   font: 900 clamp(2rem, 4vw, 2.8rem)/1.05 "Rubik", sans-serif;
 }
 .categories__intro {
-  margin: 6px 0 26px;
-  color: #c5bdb2;
-  font: 500 0.9rem/1.5 "Recursive", sans-serif;
+  margin: 6px 0 28px;
+  font: 500 0.9rem/1.45 "Recursive", sans-serif;
 }
 .categories__grid {
   display: grid;
@@ -878,14 +881,20 @@ img {
 @media (max-width: 760px) {
   .categories {
     min-height: 0;
-    padding: 75px 16px 28px;
+    padding: 215px 16px 36px;
     background-position: left -390px;
+  }
+  .categories__header {
+    width: 100%;
+    margin: 0 0 24px;
   }
   .categories__title {
     max-width: 300px;
     font-size: 2rem;
   }
   .categories__intro {
+    width: 100%;
+    margin: 6px 0 0;
     font-size: 0.8rem;
   }
   .categories__grid {
@@ -894,18 +903,27 @@ img {
   }
   .category-card {
     display: grid;
-    grid-template-columns: 45px minmax(75px, 1fr) minmax(0, 1.4fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    grid-template-rows: auto auto;
     align-items: center;
-    gap: 10px;
+    gap: 4px 10px;
     min-height: 82px;
     padding: 10px;
   }
+  .category-card__icon {
+    grid-column: 1;
+    grid-row: 1;
+  }
   .category-card__title {
+    grid-column: 1;
+    grid-row: 2;
     margin: 0;
     font-size: 0.95rem;
     overflow-wrap: anywhere;
   }
   .category-card__description {
+    grid-column: 2;
+    grid-row: 1/3;
     font-size: 0.7rem;
   }
 }
