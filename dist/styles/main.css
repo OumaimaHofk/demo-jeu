@@ -341,7 +341,6 @@ img {
   }
   .navbar__logo {
     width: 85px;
-    max-width: none;
   }
   .navbar__menu, .navbar__languages {
     display: none;
@@ -504,7 +503,7 @@ img {
   width: 42px;
   max-width: none;
   height: auto;
-  transform: translateX(-50%) rotate(-10deg);
+  transform: translateX(-50%);
   pointer-events: none;
 }
 .how-to__intro {
@@ -653,7 +652,7 @@ img {
   width: 160px;
   max-width: none;
   height: auto;
-  transform: translateX(-50%) rotate(-8deg);
+  transform: translateX(-50%);
   pointer-events: none;
   display: block;
 }
