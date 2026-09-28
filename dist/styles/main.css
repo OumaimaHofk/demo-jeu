@@ -1004,4 +1004,148 @@ img {
     margin: 0;
     text-align: center;
   }
+}
+.play-page {
+  background: #1d1d1d;
+  color: #f3e7d3;
+  --ghost-image: url("../images/elts/diablotins/ghoster-red.svg");
+}
+
+.play-page[data-color=blue] {
+  --ghost-image: url("../images/elts/diablotins/ghoster-blue.svg");
+}
+
+.play-page[data-color=light] {
+  --ghost-image: url("../images/elts/diablotins/ghoster-light.svg");
+}
+
+.play-setup {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.75fr);
+  gap: 36px 6%;
+  padding: 52px 5.5% 40px;
+}
+.play-setup__intro {
+  grid-column: 1;
+}
+.play-setup__intro h1 {
+  margin: 0 0 58px;
+  font: 900 clamp(2.5rem, 4.2vw, 3.5rem)/1 "Rubik", sans-serif;
+}
+.play-setup__intro p {
+  max-width: 510px;
+  margin: 0;
+  color: #c5bdb2;
+  font: italic 1rem/1.55 "Recursive", sans-serif;
+}
+
+.play-customizer {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+.play-customizer h2 {
+  margin: 0 0 14px;
+  font: italic 800 1.35rem "Rubik", sans-serif;
+}
+.play-customizer__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 230px;
+}
+.play-customizer__name {
+  display: grid;
+  gap: 8px;
+  color: #a99f91;
+  font: italic 0.8rem "Recursive", sans-serif;
+}
+.play-customizer__name input {
+  width: 100%;
+  padding: 9px 0;
+  border: 0;
+  border-bottom: 1px solid #777268;
+  border-radius: 0;
+  background: transparent;
+  color: #f3e7d3;
+  font: 700 1rem "Rubik", sans-serif;
+}
+.play-customizer__name input::-moz-placeholder {
+  color: #bbb1a5;
+}
+.play-customizer__name input::placeholder {
+  color: #bbb1a5;
+}
+.play-customizer__name input:focus {
+  outline: 0;
+  border-bottom-color: #ffbc08;
+}
+
+.play-colors,
+.play-poses {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.play-colors legend,
+.play-poses legend {
+  margin-bottom: 8px;
+  color: #9b9187;
+  font: italic 0.72rem "Recursive", sans-serif;
+}
+
+.play-colors {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.play-colors__choice {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+}
+.play-colors input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.play-colors input:checked + span {
+  outline: 2px solid #f3e7d3;
+  outline-offset: 3px;
+}
+.play-colors input:focus-visible + span {
+  outline: 3px solid #ffbc08;
+  outline-offset: 5px;
+}
+.play-colors input span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--swatch);
+}
+.play-colors input--red {
+  --swatch: #ff4e6b;
+}
+.play-colors input--blue {
+  --swatch: #4eb6a8;
+}
+.play-colors input--light {
+  --swatch: #dedfe0;
+}
+
+.play-avatar,
+.play-sprite {
+  display: block;
+  flex: none;
+  aspect-ratio: 1;
+  background-image: var(--ghost-image);
+  background-size: 100% 400%;
+  background-repeat: no-repeat;
+  clip-path: inset(1px);
 }/*# sourceMappingURL=main.css.map */
