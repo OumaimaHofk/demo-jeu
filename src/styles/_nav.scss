@@ -12,6 +12,7 @@
   min-height: 105px;
   padding: 0 3rem 1rem;
   border-bottom: 15px solid $color-dark;
+  width: min(calc(100% - 3rem - 28px), 1092px);
 
   &__brand {
     display: block;

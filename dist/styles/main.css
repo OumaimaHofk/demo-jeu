@@ -253,6 +253,7 @@ img {
   min-height: 105px;
   padding: 0 3rem 1rem;
   border-bottom: 15px solid #222220;
+  width: min(100% - 3rem - 28px, 1092px);
 }
 .navbar__brand {
   display: block;
@@ -482,7 +483,7 @@ img {
 .how-to__label {
   margin: 0 0 5px;
   color: #ff4e6b;
-  font: 800 0.75rem "Rubik", sans-serif;
+  font: 500 0.75rem "Rubik", sans-serif;
   text-transform: uppercase;
 }
 .how-to__title {
@@ -490,7 +491,7 @@ img {
   align-items: flex-start;
   gap: 8px;
   margin: 0;
-  font: 900 clamp(2rem, 3.2vw, 2.7rem)/1.05 "Rubik", sans-serif;
+  font: 800 clamp(2rem, 3.2vw, 2.7rem)/1.05 "Rubik", sans-serif;
 }
 .how-to__question {
   position: relative;
@@ -595,9 +596,9 @@ img {
   min-height: 315px;
   background-color: #ff4e6b;
   background-image: url("../images/elts/pattern-red.png");
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-position: left top;
-  background-size: 100% auto;
+  background-size: 15% auto;
 }
 .cultissime__inner {
   position: relative;
@@ -615,7 +616,7 @@ img {
 .cultissime__title {
   margin: 0;
   color: #222220;
-  font: 900 clamp(2.5rem, 5vw, 4rem)/1 "Rubik", sans-serif;
+  font: 800 clamp(2.5rem, 5vw, 4rem)/1 "Rubik", sans-serif;
 }
 .cultissime__subtitle {
   margin: 6px 0 20px;
@@ -679,7 +680,7 @@ img {
 }
 .quote-card__quote {
   margin: 0 0 14px;
-  font: 900 1.25rem/1.3 "Rubik", sans-serif;
+  font: 700 1.25rem/1.3 "Rubik", sans-serif;
 }
 .quote-card__description {
   max-width: 250px;
@@ -786,20 +787,20 @@ img {
   padding: 95px 5.5% 55px;
   background-color: #222220;
   background-image: url("../images/elts/pattern-dark.png");
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-position: left -315px;
-  background-size: 100% auto;
+  background-size: 15% auto;
   color: #f3e7d3;
 }
 .categories__label {
   margin: 0 0 5px;
   color: #ff4e6b;
-  font: 800 0.75rem "Rubik", sans-serif;
+  font: 500 0.75rem "Rubik", sans-serif;
   text-transform: uppercase;
 }
 .categories__title {
   margin: 0;
-  font: 900 clamp(2rem, 4vw, 2.8rem)/1.05 "Rubik", sans-serif;
+  font: 700 clamp(2rem, 4vw, 2.8rem)/1.05 "Rubik", sans-serif;
 }
 .categories__intro {
   margin: 6px 0 28px;
@@ -840,7 +841,7 @@ img {
 .category-card__title {
   margin: 14px 0 3px;
   color: var(--card-color);
-  font: 800 1.3rem/1.1 "Rubik", sans-serif;
+  font: 700 1.3rem/1.1 "Rubik", sans-serif;
 }
 .category-card__description {
   margin: 0;
@@ -1020,6 +1021,11 @@ img {
   --ghost-image: url("../images/elts/diablotins/ghoster-light.svg");
 }
 
+.play-page.container {
+  width: min(100% - 3rem - 28px, 1092px);
+  margin-inline: auto;
+}
+
 .play-setup {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.75fr);
@@ -1031,7 +1037,7 @@ img {
 }
 .play-setup__intro h1 {
   margin: 0 0 58px;
-  font: 900 clamp(2.5rem, 4.2vw, 3.5rem)/1 "Rubik", sans-serif;
+  font: 800 clamp(2.5rem, 4.2vw, 3.5rem)/1 "Rubik", sans-serif;
 }
 .play-setup__intro p {
   max-width: 510px;
@@ -1046,7 +1052,7 @@ img {
 }
 .play-customizer h2 {
   margin: 0 0 14px;
-  font: italic 800 1.35rem "Rubik", sans-serif;
+  font: italic 500 1.35rem "Rubik", sans-serif;
 }
 .play-customizer__preview {
   display: flex;
@@ -1116,8 +1122,9 @@ img {
   cursor: pointer;
 }
 .play-colors__choice input:checked + span {
-  outline: 2px solid #f3e7d3;
-  outline-offset: 3px;
+  outline: none;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
 }
 .play-colors__choice input:focus-visible + span {
   outline: 3px solid #ffbc08;
@@ -1242,48 +1249,59 @@ img {
   display: none;
 }
 .play-chip__icon {
-  display: block;
   width: 23px;
   height: 23px;
   background-image: url("../images/elts/icon/category/dark.svg");
   background-repeat: no-repeat;
-  background-size: 354px 74px;
-  background-position: var(--icon-x) -25px;
+  background-size: 195px 41px;
+  background-position: var(--icon-x) -9px;
+  border-radius: 50%;
+  background-color: rgba(34, 34, 32, 0.14);
 }
 .play-chip--action {
   --chip-color: #ff9da4;
-  --icon-x: -25px;
+  --icon-x: -9px;
 }
 .play-chip--comedy {
   --chip-color: #a8ecc8;
-  --icon-x: -65px;
+  --icon-x: -31px;
 }
 .play-chip--drama {
   --chip-color: #ec7eb5;
-  --icon-x: -105px;
+  --icon-x: -53px;
 }
 .play-chip--scifi {
   --chip-color: #6ac6f8;
-  --icon-x: -145px;
+  --icon-x: -75px;
 }
 .play-chip--horror {
   --chip-color: #70cabe;
-  --icon-x: -185px;
+  --icon-x: -97px;
 }
 .play-chip--animation {
   --chip-color: #ffb28e;
-  --icon-x: -225px;
+  --icon-x: -119px;
 }
 .play-chip--classic {
   --chip-color: #a0e1d8;
-  --icon-x: -265px;
+  --icon-x: -141px;
 }
 .play-chip--cult {
   --chip-color: #ffe28d;
-  --icon-x: -305px;
+  --icon-x: -163px;
 }
 .play-chip--all {
   --chip-color: #ededed;
+}
+.play-chip__all-icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  background-color: rgba(34, 34, 32, 0.14);
 }
 
 .play-challenge {
@@ -1326,6 +1344,54 @@ img {
   cursor: not-allowed;
 }
 
+.play-categories__choices[data-filtered=true] .play-chip[aria-pressed=false] {
+  opacity: 0.35;
+}
+.play-categories__choices[data-filtered=true] .play-chip[aria-pressed=true] {
+  opacity: 1;
+}
+
+.play-chip:focus-visible,
+.play-challenge__remove:focus-visible {
+  outline: 2px solid #ffbc08;
+  outline-offset: 3px;
+}
+
+.play-challenge__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.play-challenge__remove {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 32px;
+  padding: 0;
+  border: 1px dotted #8c8275;
+  border-radius: 5px;
+  background: transparent;
+  color: #222220;
+  font: 500 1.3rem/1 "Recursive", sans-serif;
+  cursor: pointer;
+}
+
+.play-ad {
+  display: grid;
+  place-items: center;
+  min-height: 520px;
+  padding: 40px 20px;
+  background: #1d1d1d;
+  text-align: center;
+}
+.play-ad p {
+  margin: 0;
+  color: #706b63;
+  font: italic 500 clamp(1.4rem, 3vw, 2.5rem)/1.3 "Recursive", sans-serif;
+}
+
 @media (max-width: 760px) {
   .play-page.container {
     width: 100%;
@@ -1362,6 +1428,9 @@ img {
   .play-challenge__start {
     width: 100%;
   }
+  .play-challenge .play-ad {
+    min-height: 280px;
+  }
 }
 .play-ranking {
   padding: 55px 5.5% 70px;
@@ -1370,12 +1439,12 @@ img {
 }
 .play-ranking h2 {
   margin: 0 0 25px;
-  font: 900 clamp(2.5rem, 5vw, 3.5rem) "Rubik", sans-serif;
+  font: 800 clamp(2.5rem, 5vw, 3.5rem) "Rubik", sans-serif;
 }
 .play-ranking__label {
   margin: 0 0 8px;
   color: #ffbc08;
-  font: 800 0.7rem "Rubik", sans-serif;
+  font: 500 0.7rem "Rubik", sans-serif;
   text-transform: uppercase;
 }
 .play-ranking h3 {
@@ -1383,12 +1452,13 @@ img {
   align-items: center;
   gap: 10px;
   margin: 0 0 18px;
-  font: 800 1.5rem "Rubik", sans-serif;
+  font: 700 1.5rem "Rubik", sans-serif;
 }
 .play-ranking__crown {
+  display: inline-block;
   width: 25px;
   height: 25px;
-  background: url("../images/elts/icon/category/crown.png") center top/29px 75px no-repeat;
+  background: url("../images/elts/icon/category/crown.png") center -16px/58px 150px no-repeat;
 }
 .play-ranking__notice {
   margin: 0 0 18px;
@@ -1421,21 +1491,31 @@ img {
   gap: 5px;
 }
 .play-ranking__score {
-  position: relative;
-  padding-bottom: 7px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 0;
   text-align: right;
   white-space: nowrap;
 }
 .play-ranking__score::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: var(--score);
-  max-width: 65px;
+  content: "";
+  position: static;
+  grid-column: 1/-1;
+  width: 100%;
+  max-width: none;
   height: 4px;
   border-radius: 4px;
-  background: #ffbc08;
-  content: "";
+  background: linear-gradient(to right, #ffbc08 0%, #ffbc08 var(--score, 0%), #343534 var(--score, 0%), #343534 100%);
+}
+
+.play-ranking__score-number {
+  color: #fff;
+}
+
+.play-ranking__score-icon {
+  color: #ffbc08;
 }
 
 .play-ranking__position {
@@ -1592,6 +1672,9 @@ img {
   .play-ranking__score {
     grid-column: 3;
     grid-row: 1/3;
+  }
+  .play-page.container {
+    width: 100%;
   }
   .play-ranking__notice {
     font-size: 0.75rem;

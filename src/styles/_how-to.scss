@@ -12,7 +12,7 @@
   &__label {
     margin: 0 0 5px;
     color: $color-accent;
-    font: 800 .75rem $font-title-secondary;
+    font: 500 .75rem $font-title-secondary;
     text-transform: uppercase;
   }
 
@@ -21,7 +21,7 @@
     align-items: flex-start;
     gap: 8px;
     margin: 0;
-    font: 900 clamp(2rem, 3.2vw, 2.7rem) / 1.05
+    font: 800 clamp(2rem, 3.2vw, 2.7rem) / 1.05
       $font-title-secondary;
   }
 

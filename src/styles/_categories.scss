@@ -5,21 +5,21 @@
   padding: 95px 5.5% 55px;
   background-color: $color-dark;
   background-image: url("../images/elts/pattern-dark.png");
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-position: left -315px;
-  background-size: 100% auto;
+  background-size: 15% auto;
   color: $color-background;
 
   &__label {
     margin: 0 0 5px;
     color: $color-accent;
-    font: 800 .75rem $font-title-secondary;
+    font: 500 .75rem $font-title-secondary;
     text-transform: uppercase;
   }
 
   &__title {
     margin: 0;
-    font: 900 clamp(2rem, 4vw, 2.8rem) / 1.05
+    font: 700 clamp(2rem, 4vw, 2.8rem) / 1.05
       $font-title-secondary;
   }
 
@@ -67,7 +67,7 @@
   &__title {
     margin: 14px 0 3px;
     color: var(--card-color);
-    font: 800 1.3rem / 1.1 $font-title-secondary;
+    font: 700 1.3rem / 1.1 $font-title-secondary;
   }
 
   &__description {
