@@ -50,3 +50,41 @@ if (answer) {
     });
   });
 }
+
+const playerName = document.querySelector('#player-name');
+const startButton = document.querySelector('[data-start]');
+
+if (playerName && startButton) {
+  function updateStartButton() {
+    startButton.disabled = playerName.value.trim() === '';
+  }
+
+  playerName.addEventListener('input', updateStartButton);
+  updateStartButton();
+}
+
+const podiumTimer = document.querySelector('[data-podium-timer]');
+
+if (podiumTimer) {
+  const hoursElement = podiumTimer.querySelector('[data-hours]');
+  const minutesElement = podiumTimer.querySelector('[data-minutes]');
+  const secondsElement = podiumTimer.querySelector('[data-seconds]');
+
+  function updatePodiumTimer() {
+    const now = new Date();
+    const nextMidnight = new Date(now);
+    nextMidnight.setHours(24, 0, 0, 0);
+
+    const remaining = Math.floor((nextMidnight - now) / 1000);
+    const hours = Math.floor(remaining / 3600);
+    const minutes = Math.floor((remaining % 3600) / 60);
+    const seconds = remaining % 60;
+
+    hoursElement.textContent = String(hours).padStart(2, '0');
+    minutesElement.textContent = String(minutes).padStart(2, '0');
+    secondsElement.textContent = String(seconds).padStart(2, '0');
+  }
+
+  updatePodiumTimer();
+  setInterval(updatePodiumTimer, 1000);
+}
