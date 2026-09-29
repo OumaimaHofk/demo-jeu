@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Recursive";
   src: url("webfonts/Recursive/Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf") format("truetype");
@@ -1105,7 +1106,7 @@ img {
   place-items: center;
   cursor: pointer;
 }
-.play-colors input {
+.play-colors__choice input {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1114,31 +1115,35 @@ img {
   opacity: 0;
   cursor: pointer;
 }
-.play-colors input:checked + span {
+.play-colors__choice input:checked + span {
   outline: 2px solid #f3e7d3;
   outline-offset: 3px;
 }
-.play-colors input:focus-visible + span {
+.play-colors__choice input:focus-visible + span {
   outline: 3px solid #ffbc08;
   outline-offset: 5px;
 }
-.play-colors input span {
+.play-colors__choice span {
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background: var(--swatch);
 }
-.play-colors input--red {
+.play-colors__choice--red {
   --swatch: #ff4e6b;
 }
-.play-colors input--blue {
+.play-colors__choice--blue {
   --swatch: #4eb6a8;
 }
-.play-colors input--light {
+.play-colors__choice--light {
   --swatch: #dedfe0;
 }
 
+/*
+ * Chaque SVG mesure 294 × 1176 px :
+ * quatre images carrées de 294 × 294 px, placées verticalement.
+ */
 .play-avatar,
 .play-sprite {
   display: block;
@@ -1148,4 +1153,346 @@ img {
   background-size: 100% 400%;
   background-repeat: no-repeat;
   clip-path: inset(1px);
+}
+
+.play-avatar {
+  width: min(195px, 68%);
+}
+
+.play-page[data-pose="0"] .play-avatar,
+.play-sprite--0 {
+  background-position: 50% 0%;
+}
+
+.play-page[data-pose="1"] .play-avatar,
+.play-sprite--1 {
+  background-position: 50% 33.333%;
+}
+
+.play-page[data-pose="2"] .play-avatar,
+.play-sprite--2 {
+  background-position: 50% 66.667%;
+}
+
+.play-page[data-pose="3"] .play-avatar,
+.play-sprite--3 {
+  background-position: 50% 100%;
+}
+
+.play-poses {
+  display: grid;
+  gap: 4px;
+}
+.play-poses button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 3px;
+  border: 1px dotted transparent;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+.play-poses button[aria-pressed=true], .play-poses button:focus-visible {
+  border-color: #f3e7d3;
+}
+.play-poses .play-sprite {
+  width: 37px;
+}
+
+.play-categories {
+  grid-column: 1;
+  align-self: end;
+}
+.play-categories summary {
+  margin-bottom: 20px;
+  color: #aaa094;
+  font: italic 0.8rem "Recursive", sans-serif;
+  cursor: pointer;
+}
+.play-categories__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 12px 0;
+  border-top: 1px dotted #635e58;
+  border-bottom: 1px dotted #635e58;
+}
+
+.play-chip {
+  --chip-color: #ff9da4;
+  --icon-x: -21px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 2px 7px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--chip-color);
+  color: #222220;
+  font: 800 0.72rem "Rubik", sans-serif;
+  cursor: pointer;
+}
+.play-chip[aria-pressed=false] {
+  opacity: 0.7;
+}
+.play-chip[aria-pressed=false] .play-chip__label {
+  display: none;
+}
+.play-chip__icon {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background-image: url("../images/elts/icon/category/dark.svg");
+  background-repeat: no-repeat;
+  background-size: 354px 74px;
+  background-position: var(--icon-x) -25px;
+}
+.play-chip--action {
+  --chip-color: #ff9da4;
+  --icon-x: -25px;
+}
+.play-chip--comedy {
+  --chip-color: #a8ecc8;
+  --icon-x: -65px;
+}
+.play-chip--drama {
+  --chip-color: #ec7eb5;
+  --icon-x: -105px;
+}
+.play-chip--scifi {
+  --chip-color: #6ac6f8;
+  --icon-x: -145px;
+}
+.play-chip--horror {
+  --chip-color: #70cabe;
+  --icon-x: -185px;
+}
+.play-chip--animation {
+  --chip-color: #ffb28e;
+  --icon-x: -225px;
+}
+.play-chip--classic {
+  --chip-color: #a0e1d8;
+  --icon-x: -265px;
+}
+.play-chip--cult {
+  --chip-color: #ffe28d;
+  --icon-x: -305px;
+}
+.play-chip--all {
+  --chip-color: #ededed;
+}
+
+.play-challenge {
+  grid-column: 1/-1;
+}
+.play-challenge__caption {
+  margin: 0 0 5px;
+  color: #aaa094;
+  font: italic 0.75rem "Recursive", sans-serif;
+}
+.play-challenge__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 82px;
+  padding: 7px;
+  background: #f3e7d3;
+  color: #222220;
+}
+.play-challenge__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 18px;
+  font: 800 0.95rem "Rubik", sans-serif;
+}
+.play-challenge__start {
+  flex: none;
+  min-height: 68px;
+  padding: 12px 26px;
+  border: 0;
+  background: radial-gradient(ellipse at center, #ffcb25, #d19300);
+  color: #222220;
+  font: 900 1.1rem "Rubik", sans-serif;
+  cursor: pointer;
+}
+.play-challenge__start:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px) {
+  .play-page.container {
+    width: 100%;
+  }
+  .play-setup {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 32px 16px 36px;
+  }
+  .play-setup__intro h1 {
+    margin-bottom: 24px;
+  }
+  .play-setup__intro p {
+    font-size: 0.9rem;
+  }
+  .play-customizer {
+    width: 100%;
+  }
+  .play-customizer__preview {
+    min-height: 210px;
+  }
+  .play-avatar {
+    width: min(175px, 65%);
+  }
+  .play-categories,
+  .play-challenge {
+    width: 100%;
+  }
+  .play-challenge__bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .play-challenge__start {
+    width: 100%;
+  }
+}
+.play-ranking {
+  padding: 55px 5.5% 70px;
+  background: #222220 url("../images/elts/pattern-dark.png") left top/100% auto repeat-y;
+  color: #f3e7d3;
+}
+.play-ranking h2 {
+  margin: 0 0 25px;
+  font: 900 clamp(2.5rem, 5vw, 3.5rem) "Rubik", sans-serif;
+}
+.play-ranking__label {
+  margin: 0 0 8px;
+  color: #ffbc08;
+  font: 800 0.7rem "Rubik", sans-serif;
+  text-transform: uppercase;
+}
+.play-ranking h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  font: 800 1.5rem "Rubik", sans-serif;
+}
+.play-ranking__crown {
+  width: 25px;
+  height: 25px;
+  background: url("../images/elts/icon/category/crown.png") center top/29px 75px no-repeat;
+}
+.play-ranking__notice {
+  margin: 0 0 18px;
+  padding: 15px 18px;
+  background: #101112;
+  font: 0.8rem "Recursive", sans-serif;
+}
+.play-ranking__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.play-ranking__list li {
+  display: grid;
+  grid-template-columns: 26px minmax(150px, 1fr) minmax(0, 2fr) 75px;
+  align-items: center;
+  gap: 12px;
+  min-height: 49px;
+  padding: 8px 14px;
+  border-bottom: 1px solid #343534;
+  background: #1d1e1d;
+  font: 700 0.78rem "Rubik", sans-serif;
+}
+.play-ranking__position, .play-ranking__score {
+  color: #ffbc08;
+}
+.play-ranking__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.play-ranking__score {
+  position: relative;
+  padding-bottom: 7px;
+  text-align: right;
+  white-space: nowrap;
+}
+.play-ranking__score::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: var(--score);
+  max-width: 65px;
+  height: 4px;
+  border-radius: 4px;
+  background: #ffbc08;
+  content: "";
+}
+
+.ranking-tag {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: var(--tag-color);
+  color: #222220;
+  font: 800 0.68rem "Rubik", sans-serif;
+  white-space: nowrap;
+}
+.ranking-tag--all {
+  --tag-color: #ededed;
+}
+.ranking-tag--action {
+  --tag-color: #ff9da4;
+}
+.ranking-tag--comedy {
+  --tag-color: #a8ecc8;
+}
+.ranking-tag--drama {
+  --tag-color: #ec7eb5;
+}
+.ranking-tag--scifi {
+  --tag-color: #6ac6f8;
+}
+.ranking-tag--horror {
+  --tag-color: #70cabe;
+}
+.ranking-tag--animation {
+  --tag-color: #ffb28e;
+}
+.ranking-tag--classic {
+  --tag-color: #a0e1d8;
+}
+.ranking-tag--cult {
+  --tag-color: #ffe28d;
+}
+
+@media (max-width: 760px) {
+  .play-ranking {
+    padding: 36px 16px 50px;
+  }
+  .play-ranking__list li {
+    grid-template-columns: 24px minmax(0, 1fr) 65px;
+    gap: 7px;
+    font-size: 0.7rem;
+  }
+  .play-ranking__categories {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .play-ranking__score {
+    grid-column: 3;
+    grid-row: 1/3;
+  }
+  .ranking-tag {
+    font-size: 0.6rem;
+  }
 }/*# sourceMappingURL=main.css.map */

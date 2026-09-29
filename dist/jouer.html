@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Movie Kings — Prêt à jouer?</title>
-  <link rel="stylesheet" href="styles/main.min.css">
-  <script src="scripts/javascript.js" defer></script>
+<link rel="stylesheet" href="styles/main.min.css">
+<script src="scripts/javascript.js" defer></script>
 </head>
 
 <body>
@@ -62,78 +62,275 @@
   </header>
 
   <main class="play-page container" data-play data-color="red" data-pose="2">
-    <section class="play-setup" aria-labelledby="play-title">
-      <div class="play-setup__intro">
-        <h1 id="play-title">Prêt à jouer&nbsp;?</h1>
+  <section class="play-setup" aria-labelledby="play-title">
+    <div class="play-setup__intro">
+      <h1 id="play-title">Prêt à jouer&nbsp;?</h1>
 
-        <p>
-          Choisis ton défi dans les catégories suivantes et prépare-toi à
-          reconnaître les répliques les plus cultes du cinéma.
-        </p>
-      </div>
+      <p>
+        Choisis ton défi dans les catégories suivantes et prépare-toi à
+        reconnaître les répliques les plus cultes du cinéma.
+      </p>
+    </div>
 
-      <div class="play-customizer">
-        <h2>Faisons connaissance&nbsp;!</h2>
+    <div class="play-customizer">
+      <h2>Faisons connaissance&nbsp;!</h2>
 
-        <fieldset class="play-colors">
-          <legend>Couleur</legend>
-          <label class="play-colors__choice play-colors__choice--red">
-            <input type="radio" name="ghost-color" value="red" aria-label="Rose" checked>
-            <span aria-hidden="true"></span>
-          </label>
-          <label class="play-colors__choice play-colors__choice--blue">
-            <input type="radio" name="ghost-color" value="blue" aria-label="Turquoise">
-            <span aria-hidden="true"></span>
-          </label>
-          <label class="play-colors__choice play-colors__choice--light">
-            <input type="radio" name="ghost-color" value="light" aria-label="Clair">
-            <span aria-hidden="true"></span>
-          </label>
-        </fieldset>
+      <fieldset class="play-colors">
+        <legend>Couleur</legend>
 
-        <div class="play-customizer__preview">
-          <div class="play-avatar" role="img" aria-label="Diablotin rose, expression neutre"></div>
-          <fieldset class="play-poses">
-            <legend>Humeur</legend>
-
-            <button type="button" data-pose-choice="0" aria-label="Triste" aria-pressed="false">
-              <span class="play-sprite play-sprite--0"></span>
-            </button>
-            <button type="button" data-pose-choice="1" aria-label="Souriant" aria-pressed="false">
-              <span class="play-sprite play-sprite--1"></span>
-            </button>
-            <button type="button" data-pose-choice="2" aria-label="Neutre" aria-pressed="true">
-              <span class="play-sprite play-sprite--2"></span>
-            </button>
-            <button type="button" data-pose-choice="3" aria-label="Hilare" aria-pressed="false">
-              <span class="play-sprite play-sprite--3"></span>
-            </button>
-          </fieldset>
-        </div>
-
-        <label class="play-customizer__name" for="player-name">
-          Quel est ton nom de joueur&nbsp;?
-          <input id="player-name" type="text" maxlength="24" autocomplete="nickname" placeholder="Joueur inconnu"
-            required>
+        <label class="play-colors__choice play-colors__choice--red">
+          <input type="radio" name="ghost-color" value="red"
+                 aria-label="Rose" checked>
+          <span aria-hidden="true"></span>
         </label>
+
+        <label class="play-colors__choice play-colors__choice--blue">
+          <input type="radio" name="ghost-color" value="blue"
+                 aria-label="Turquoise">
+          <span aria-hidden="true"></span>
+        </label>
+
+        <label class="play-colors__choice play-colors__choice--light">
+          <input type="radio" name="ghost-color" value="light"
+                 aria-label="Clair">
+          <span aria-hidden="true"></span>
+        </label>
+      </fieldset>
+
+      <div class="play-customizer__preview">
+        <div
+          class="play-avatar"
+          role="img"
+          aria-label="Diablotin rose, expression neutre"
+        ></div>
+
+        <fieldset class="play-poses">
+          <legend>Humeur</legend>
+
+          <button type="button" data-pose-choice="0"
+                  aria-label="Triste" aria-pressed="false">
+            <span class="play-sprite play-sprite--0"></span>
+          </button>
+
+          <button type="button" data-pose-choice="1"
+                  aria-label="Souriant" aria-pressed="false">
+            <span class="play-sprite play-sprite--1"></span>
+          </button>
+
+          <button type="button" data-pose-choice="2"
+                  aria-label="Neutre" aria-pressed="true">
+            <span class="play-sprite play-sprite--2"></span>
+          </button>
+
+          <button type="button" data-pose-choice="3"
+                  aria-label="Hilare" aria-pressed="false">
+            <span class="play-sprite play-sprite--3"></span>
+          </button>
+        </fieldset>
       </div>
-      <details class="play-categories" open>
+
+      <label class="play-customizer__name" for="player-name">
+        Quel est ton nom de joueur&nbsp;?
+        <input
+          id="player-name"
+          type="text"
+          maxlength="24"
+          autocomplete="nickname"
+          placeholder="Joueur inconnu"
+          required
+        >
+      </label>
+    </div>
+
+    <details class="play-categories" open>
       <summary>Choisis une ou plusieurs catégories</summary>
+
       <div class="play-categories__choices"
            role="group" aria-label="Catégories du défi">
         <button type="button" class="play-chip play-chip--action"
                 data-category="action" aria-pressed="false">
           <span class="play-chip__icon" aria-hidden="true"></span>
-          <span class="play-chip__icon" >action</span>
+          <span class="play-chip__label">Action</span>
         </button>
 
+        <button type="button" class="play-chip play-chip--comedy"
+                data-category="comedie" aria-pressed="false">
+          <span class="play-chip__icon" aria-hidden="true"></span>
+          <span class="play-chip__label">Comédie</span>
+        </button>
 
-    </section>
+        <button type="button" class="play-chip play-chip--drama"
+                data-category="drame" aria-pressed="false">
+          <span class="play-chip__icon" aria-hidden="true"></span>
+          <span class="play-chip__label">Drame</span>
+        </button>
 
+        <button type="button" class="play-chip play-chip--scifi"
+                data-category="science-fiction" aria-pressed="false">
+          <span class="play-chip__icon" aria-hidden="true"></span>
+          <span class="play-chip__label">Science-fiction</span>
+        </button>
+
+        <button type="button" class="play-chip play-chip--horror"
+                data-category="horreur" aria-pressed="false">
+          <span class="play-chip__icon" aria-hidden="true"></span>
+          <span class="play-chip__label">Horreur</span>
+        </button>
+
+        <button type="button" class="play-chip play-chip--animation"
+                data-category="animation" aria-pressed="false">
+          <span class="play-chip__icon" aria-hidden="true"></span>
+          <span class="play-chip__label">Animation</span>
+        </button>
+
+        <button type="button" class="play-chip play-chip--classic"
+                data-category="classiques" aria-pressed="false">
+          <span class="play-chip__icon" aria-hidden="true"></span>
+          <span class="play-chip__label">Classiques</span>
+        </button>
+
+        <button type="button" class="play-chip play-chip--cult"
+                data-category="cultes" aria-pressed="false">
+          <span class="play-chip__icon" aria-hidden="true"></span>
+          <span class="play-chip__label">Cultes</span>
+        </button>
+
+        <button type="button" class="play-chip play-chip--all"
+                data-all aria-pressed="true">
+          ✱ Tous
+        </button>
+      </div>
+    </details>
+
+    <div class="play-challenge">
+      <p class="play-challenge__caption">Ton défi&nbsp;:</p>
+
+      <div class="play-challenge__bar">
+        <div class="play-challenge__tags" data-tags aria-live="polite">
+          #tous
+        </div>
+
+        <button class="play-challenge__start"
+                data-start type="button" disabled>
+          Jouer avec ce défi
+        </button>
+      </div>
     </div>
-    </section>
-    </div>
-  </main>
+  </section>
+  <section class="play-ranking" id="classement"
+         aria-labelledby="ranking-title">
+  <h2 id="ranking-title">Classement&nbsp;!</h2>
+  <p class="play-ranking__label">Répliques cultes | Classement VF</p>
+
+  <h3>
+    Les rois du jour
+    <span class="play-ranking__crown" aria-hidden="true"></span>
+  </h3>
+
+  <p class="play-ranking__notice">
+    Exemple de classement
+  </p>
+
+  <ol class="play-ranking__list">
+    <li style="--score: 96%">
+      <span class="play-ranking__position">1</span>
+      <strong>QueenKong1990</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--all">Tous</span>
+      </span>
+      <span class="play-ranking__score">96 % ☆</span>
+    </li>
+
+    <li style="--score: 94%">
+      <span class="play-ranking__position">2</span>
+      <strong>CarnivalDuckShoot</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--action">Action</span>
+        <span class="ranking-tag ranking-tag--cult">Cultes</span>
+        <span class="ranking-tag ranking-tag--drama">Drame</span>
+      </span>
+      <span class="play-ranking__score">94 % ☆</span>
+    </li>
+
+    <li style="--score: 92%">
+      <span class="play-ranking__position">3</span>
+      <strong>Rachel_Welsh69</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--scifi">Science-fiction</span>
+        <span class="ranking-tag ranking-tag--horror">Horreur</span>
+      </span>
+      <span class="play-ranking__score">92 % ☆</span>
+    </li>
+
+    <li style="--score: 90%">
+      <span class="play-ranking__position">4</span>
+      <strong>Brandon-Wolsh</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--classic">Classiques</span>
+      </span>
+      <span class="play-ranking__score">90 % ☆</span>
+    </li>
+
+    <li style="--score: 89%">
+      <span class="play-ranking__position">5</span>
+      <strong>Hall-B2-1000</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--scifi">Science-fiction</span>
+        <span class="ranking-tag ranking-tag--classic">Classiques</span>
+      </span>
+      <span class="play-ranking__score">89 % ☆</span>
+    </li>
+
+    <li style="--score: 88%">
+      <span class="play-ranking__position">6</span>
+      <strong>Stephano83</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--all">Tous</span>
+      </span>
+      <span class="play-ranking__score">88 % ☆</span>
+    </li>
+
+    <li style="--score: 87%">
+      <span class="play-ranking__position">7</span>
+      <strong>MelissaHoty</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--comedy">Comédie</span>
+        <span class="ranking-tag ranking-tag--cult">Cultes</span>
+      </span>
+      <span class="play-ranking__score">87 % ☆</span>
+    </li>
+
+    <li style="--score: 85%">
+      <span class="play-ranking__position">8</span>
+      <strong>ALAIN-CHABAT</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--cult">Cultes</span>
+      </span>
+      <span class="play-ranking__score">85 % ☆</span>
+    </li>
+
+    <li style="--score: 85%">
+      <span class="play-ranking__position">9</span>
+      <strong>RachidaBidadad</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--scifi">Science-fiction</span>
+        <span class="ranking-tag ranking-tag--classic">Classiques</span>
+      </span>
+      <span class="play-ranking__score">85 % ☆</span>
+    </li>
+
+    <li style="--score: 84%">
+      <span class="play-ranking__position">10</span>
+      <strong>ray-mon-3D</strong>
+      <span class="play-ranking__categories">
+        <span class="ranking-tag ranking-tag--animation">Animation</span>
+        <span class="ranking-tag ranking-tag--horror">Horreur</span>
+      </span>
+      <span class="play-ranking__score">84 % ☆</span>
+    </li>
+  </ol>
+</section>
+</main>
   <footer class="site-footer">
     <div class="site-footer__identity">
       <span class="site-footer__mark" aria-hidden="true">
