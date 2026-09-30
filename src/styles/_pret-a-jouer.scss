@@ -430,6 +430,37 @@
     font: italic 500 clamp(1.4rem, 3vw, 2.5rem) / 1.3 $font-text;
   }
 }
+.play-customizer__name-field {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #777268;
+
+  input {
+    flex: 1;
+    min-width: 0;
+    border-bottom: 0;
+  }
+
+  &:focus-within {
+    border-bottom-color: $color-primary;
+  }
+
+  input:valid + .play-customizer__check {
+    visibility: visible;
+  }
+}
+
+.play-customizer__check {
+  visibility: hidden;
+  flex: none;
+  width: 10px;
+  height: 18px;
+  margin-inline: 8px;
+  border-right: 4px solid $color-primary;
+  border-bottom: 4px solid $color-primary;
+  transform: rotate(45deg);
+}
 
 @media (max-width: 760px) {
 

@@ -1392,6 +1392,35 @@ img {
   font: italic 500 clamp(1.4rem, 3vw, 2.5rem)/1.3 "Recursive", sans-serif;
 }
 
+.play-customizer__name-field {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #777268;
+}
+.play-customizer__name-field input {
+  flex: 1;
+  min-width: 0;
+  border-bottom: 0;
+}
+.play-customizer__name-field:focus-within {
+  border-bottom-color: #ffbc08;
+}
+.play-customizer__name-field input:valid + .play-customizer__check {
+  visibility: visible;
+}
+
+.play-customizer__check {
+  visibility: hidden;
+  flex: none;
+  width: 10px;
+  height: 18px;
+  margin-inline: 8px;
+  border-right: 4px solid #ffbc08;
+  border-bottom: 4px solid #ffbc08;
+  transform: rotate(45deg);
+}
+
 @media (max-width: 760px) {
   .play-page.container {
     width: 100%;

@@ -120,8 +120,13 @@
 
         <label class="play-customizer__name" for="player-name">
           Quel est ton nom de joueur&nbsp;?
-          <input id="player-name" type="text" maxlength="24" autocomplete="nickname" placeholder="Joueur inconnu"
-            required>
+
+          <span class="play-customizer__name-field">
+            <input id="player-name" type="text" maxlength="24" autocomplete="nickname" placeholder="Joueur inconnu"
+              pattern=".*\S.*" required>
+
+            <span class="play-customizer__check" aria-hidden="true"></span>
+          </span>
         </label>
       </div>
 
@@ -338,14 +343,14 @@
         </li>
       </ol>
     </section>
-      </section> 
+    </section>
 
-  <aside class="play-ad" aria-label="Espace publicitaire">
-    <p>Zone de l’annonceur</p>
-  </aside>
-</main>
+    <aside class="play-ad" aria-label="Espace publicitaire">
+      <p>Zone de l’annonceur</p>
+    </aside>
+  </main>
 
-</footer>
+  </footer>
   </main>
   <footer class="site-footer">
     <div class="site-footer__identity">
