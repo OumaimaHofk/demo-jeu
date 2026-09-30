@@ -15,7 +15,6 @@
       <a class="navbar__brand" href="index.html" aria-label="Movie Kings, accueil">
         <img class="navbar__logo" src="images/LOGO-FULL.svg" alt="Movie Kings">
       </a>
-
       <ul class="navbar__menu">
         <li>
           <a class="navbar__link" href="index.html" aria-current="page">
@@ -23,14 +22,12 @@
             Accueil
           </a>
         </li>
-
         <li>
           <a class="navbar__link navbar__link--active" href="jouer.html">
             <span class="navbar__icon navbar__icon--play" aria-hidden="true"></span>
             Jouer
           </a>
         </li>
-
         <li>
           <a class="navbar__link" href="#classement">
             <span class="navbar__icon navbar__icon--ranking" aria-hidden="true"></span>
@@ -38,20 +35,17 @@
           </a>
         </li>
       </ul>
-
       <div class="navbar__languages" aria-label="Langue actuelle : français">
         <span class="navbar__language navbar__language--active">FR</span>
         <span class="navbar__language">EN</span>
         <span class="navbar__language">DE</span>
       </div>
-
       <details class="navbar__mobile">
         <summary class="navbar__toggle" aria-label="Menu de navigation">
           <span></span>
           <span></span>
           <span></span>
         </summary>
-
         <div class="navbar__mobile-menu">
           <a href="index.html">Accueil</a>
           <a href="jouer.html">Jouer</a>
@@ -60,115 +54,91 @@
       </details>
     </nav>
   </header>
-
   <main class="play-page container" data-play data-color="red" data-pose="2">
     <section class="play-setup" aria-labelledby="play-title">
       <div class="play-setup__intro">
         <h1 id="play-title">Prêt à jouer&nbsp;?</h1>
-
         <p>
           Choisis ton défi dans les catégories suivantes et prépare-toi à
           reconnaître les répliques les plus cultes du cinéma.
         </p>
       </div>
-
       <div class="play-customizer">
         <h2>Faisons connaissance&nbsp;!</h2>
-
         <fieldset class="play-colors">
           <legend>Couleur</legend>
-
           <label class="play-colors__choice play-colors__choice--red">
             <input type="radio" name="ghost-color" value="red" aria-label="Rose" checked>
             <span aria-hidden="true"></span>
           </label>
-
           <label class="play-colors__choice play-colors__choice--blue">
             <input type="radio" name="ghost-color" value="blue" aria-label="Turquoise">
             <span aria-hidden="true"></span>
           </label>
-
           <label class="play-colors__choice play-colors__choice--light">
             <input type="radio" name="ghost-color" value="light" aria-label="Clair">
             <span aria-hidden="true"></span>
           </label>
         </fieldset>
-
         <div class="play-customizer__preview">
-          <div class="play-avatar" role="img" aria-label="Diablotin rose, expression neutre"></div>
-
+          <div class="play-avatar" role="img" aria-label="Diablotin rose, expression neutre">
+          </div>
           <fieldset class="play-poses">
             <legend>Humeur</legend>
-
             <button type="button" data-pose-choice="0" aria-label="Triste" aria-pressed="false">
               <span class="play-sprite play-sprite--0"></span>
             </button>
-
             <button type="button" data-pose-choice="1" aria-label="Souriant" aria-pressed="false">
               <span class="play-sprite play-sprite--1"></span>
             </button>
-
             <button type="button" data-pose-choice="2" aria-label="Neutre" aria-pressed="true">
               <span class="play-sprite play-sprite--2"></span>
             </button>
-
             <button type="button" data-pose-choice="3" aria-label="Hilare" aria-pressed="false">
               <span class="play-sprite play-sprite--3"></span>
             </button>
           </fieldset>
         </div>
-
         <label class="play-customizer__name" for="player-name">
           Quel est ton nom de joueur&nbsp;?
-
           <span class="play-customizer__name-field">
             <input id="player-name" type="text" maxlength="24" autocomplete="nickname" placeholder="Joueur inconnu"
               pattern=".*\S.*" required>
-
             <span class="play-customizer__check" aria-hidden="true"></span>
           </span>
         </label>
       </div>
-
       <details class="play-categories" open>
         <summary>Choisis une ou plusieurs catégories</summary>
-
         <div class="play-categories__choices" role="group" aria-label="Catégories du défi">
           <button type="button" class="play-chip play-chip--action" data-category="action" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Action</span>
           </button>
-
           <button type="button" class="play-chip play-chip--comedy" data-category="comedie" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Comédie</span>
           </button>
-
           <button type="button" class="play-chip play-chip--drama" data-category="drame" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Drame</span>
           </button>
-
           <button type="button" class="play-chip play-chip--scifi" data-category="science-fiction" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Science-fiction</span>
           </button>
-
           <button type="button" class="play-chip play-chip--horror" data-category="horreur" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Horreur</span>
           </button>
-
           <button type="button" class="play-chip play-chip--animation" data-category="animation" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Animation</span>
           </button>
-
           <button type="button" class="play-chip play-chip--classic" data-category="classiques" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Classiques</span>
           </button>
-
           <button type="button" class="play-chip play-chip--cult" data-category="cultes" aria-pressed="false">
             <span class="play-chip__icon" aria-hidden="true"></span>
             <span class="play-chip__label">Cultes</span>
@@ -184,10 +154,8 @@
           </button>
         </div>
       </details>
-
       <div class="play-challenge">
         <p class="play-challenge__caption">Ton défi&nbsp;:</p>
-
         <div class="play-challenge__bar">
           <div class="play-challenge__tags" data-tags aria-live="polite">
             #tous
@@ -202,12 +170,10 @@
     <section class="play-ranking" id="classement" aria-labelledby="ranking-title">
       <h2 id="ranking-title">Classement&nbsp;!</h2>
       <p class="play-ranking__label">Répliques cultes | Classement VF</p>
-
       <h3>
         Les rois du jour
         <span class="play-ranking__crown" aria-hidden="true"></span>
       </h3>
-
       <div class="play-ranking__notice">
         <span>Prochain podium dévoilé dans…</span>
 
@@ -217,7 +183,6 @@
           <span class="play-ranking__seconds" data-seconds>00</span>
         </span>
       </div>
-
       <ol class="play-ranking__list">
         <li style="--score: 96%">
           <span class="play-ranking__position">1</span>
@@ -230,7 +195,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 94%">
           <span class="play-ranking__position">2</span>
           <p>CarnivalDuckShoot</p>
@@ -244,7 +208,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 92%">
           <span class="play-ranking__position">3</span>
           <p>Rachel_Welsh69</p>
@@ -257,7 +220,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 90%">
           <span class="play-ranking__position">4</span>
           <p>Brandon-Wolsh</p>
@@ -269,7 +231,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 89%">
           <span class="play-ranking__position">5</span>
           <p>Hall-B2-1000</p>
@@ -282,7 +243,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 88%">
           <span class="play-ranking__position">6</span>
           <p>Stephano83</p>
@@ -294,7 +254,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 87%">
           <span class="play-ranking__position">7</span>
           <p>MelissaHoty</p>
@@ -307,7 +266,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 85%">
           <span class="play-ranking__position">8</span>
           <p>ALAIN-CHABAT</p>
@@ -319,7 +277,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 85%">
           <span class="play-ranking__position">9</span>
           <p>RachidaBidadad</p>
@@ -332,7 +289,6 @@
             <span class="play-ranking__score-icon" aria-hidden="true">☆</span>
           </span>
         </li>
-
         <li style="--score: 84%">
           <span class="play-ranking__position">10</span>
           <p>ray-mon-3D</p>
@@ -347,13 +303,10 @@
         </li>
       </ol>
     </section>
-
-
     <aside class="play-ad" aria-label="Espace publicitaire">
       <p>Zone de l’annonceur</p>
     </aside>
   </main>
-
   </footer>
   </main>
   <footer class="site-footer">
@@ -364,7 +317,6 @@
       <strong>MK</strong>
       <small>© 2027 Movie Kings</small>
     </div>
-
     <nav class="site-footer__socials" aria-label="Réseaux sociaux">
       <a href="https://www.instagram.com/">Instagram</a>
       <a href="https://www.tiktok.com/">TikTok</a>
