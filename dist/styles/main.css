@@ -1304,6 +1304,10 @@ img {
   background-color: rgba(34, 34, 32, 0.14);
 }
 
+.play-chip--random {
+  --chip-color: #b9b9b9;
+}
+
 .play-challenge {
   grid-column: 1/-1;
 }

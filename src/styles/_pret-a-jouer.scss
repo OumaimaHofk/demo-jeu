@@ -320,6 +320,7 @@
   &--all {
     --chip-color: #ededed;
   }
+  
 
   &__all-icon {
     display: grid;
@@ -331,6 +332,9 @@
     border-radius: 50%;
     background-color: rgba($color-dark, .14);
   }
+}
+.play-chip--random {
+  --chip-color: #b9b9b9;
 }
 
 .play-challenge {
